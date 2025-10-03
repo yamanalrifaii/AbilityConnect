@@ -291,9 +291,4 @@ Videos are stored directly in Firebase Storage. For large-scale production:
 - Gamification for children
 - Advanced analytics dashboard
 
-## Support
 
-For issues and questions, please check the documentation or contact support.
-
-
-# Medminds
