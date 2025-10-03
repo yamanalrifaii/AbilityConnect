@@ -295,7 +295,5 @@ Videos are stored directly in Firebase Storage. For large-scale production:
 
 For issues and questions, please check the documentation or contact support.
 
-## License
 
-This project is proprietary software. All rights reserved.
 # Medminds
