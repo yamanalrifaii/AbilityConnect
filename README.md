@@ -231,16 +231,6 @@ npm run build
 
 ## Important Notes
 
-### Security Considerations
-
-⚠️ **Warning**: This implementation uses OpenAI API directly from the browser (`dangerouslyAllowBrowser: true`). This is NOT recommended for production.
-
-**For Production**, you should:
-1. Create a backend API (Node.js, Python, etc.)
-2. Make OpenAI API calls from the backend
-3. Keep your OpenAI API key secure on the server
-4. Never expose API keys in client-side code
-
 ### iOS Calendar Integration
 
 The iOS Calendar integration works by generating `.ics` files that can be imported into any calendar application. Users need to:
@@ -249,9 +239,6 @@ The iOS Calendar integration works by generating `.ics` files that can be import
 3. Open the file on their iOS device
 4. Import to Calendar app
 
-For automatic sync, you would need to implement:
-- CalDAV server integration
-- iOS Calendar API (requires native iOS app)
 
 ### Video Storage
 
