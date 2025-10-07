@@ -1,4 +1,4 @@
-# MediMinds - Therapy Communication Platform
+# AbilityConnect - Therapy Communication Platform
 
 A comprehensive web application for better communication between parents and therapists, featuring AI-powered treatment plan generation, progress tracking, and real-time communication.
 
