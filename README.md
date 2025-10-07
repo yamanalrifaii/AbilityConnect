@@ -1,6 +1,6 @@
-# AbilityConnect - Therapy Communication Platform
+# AbilityConnect - Smart Therapy Assistant
 
-A comprehensive web application for better communication between parents and therapists, featuring AI-powered treatment plan generation, progress tracking, and real-time communication.
+AbilityConnect transforms how therapists and parents collaborate on child therapy. Therapists simply record their session notes—AI transcribes, summarizes, and creates actionable daily tasks automatically. Parents see exactly what to do each day, track their child's progress through visual dashboards, and communicate directly with therapists, ensuring consistent therapy execution at home.
 
 ## Features
 
