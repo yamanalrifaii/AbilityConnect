@@ -270,11 +270,8 @@ Videos are stored directly in Firebase Storage. For large-scale production:
 ## Future Enhancements
 
 - Native mobile apps (iOS/Android)
-- Push notifications for reminders
 - Video chat for remote therapy sessions
 - Multi-language support
-- Automated progress reports
-- Integration with wearable devices
 - Gamification for children
 - Advanced analytics dashboard
 
