@@ -1,4 +1,4 @@
-# AbilityConnect - Smart Therapy Assistant
+# AbilityConnect - Pediatric Home Therapy Companian 
 
 AbilityConnect transforms how therapists and parents collaborate on child therapy. Therapists simply record their session notes—AI transcribes, summarizes, and creates actionable daily tasks automatically. Parents see exactly what to do each day, track their child's progress through visual dashboards, and communicate directly with therapists, ensuring consistent therapy execution at home.
 
