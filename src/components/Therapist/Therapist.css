@@ -1,0 +1,1518 @@
+/* Therapist Dashboard */
+.therapist-header {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0;
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.therapist-header h1 {
+  margin: 0;
+  color: #667eea;
+  font-size: 24px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-info span {
+  color: #555;
+  font-size: 16px;
+}
+
+.btn-signout {
+  padding: 10px 20px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-signout:hover {
+  background: #45a049;
+}
+
+/* Navigation */
+.therapist-nav {
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.therapist-nav button {
+  background: transparent;
+  border: none;
+  padding: 15px 30px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.therapist-nav button:hover {
+  color: #667eea;
+  background: #f5f5ff;
+}
+
+.therapist-nav button.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+/* Content */
+.therapist-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px;
+  min-height: calc(100vh - 200px);
+}
+
+.back-button {
+  padding: 10px 20px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.2s;
+}
+
+.back-button:hover {
+  background: #e8e8e8;
+}
+
+/* Patient List */
+.patient-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.patient-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.patient-list-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.btn-refresh {
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-refresh:hover {
+  background: #5568d3;
+}
+
+.patients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+.patient-card-large {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s;
+}
+
+.patient-card-large:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.patient-card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.patient-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.patient-details h3 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.patient-id {
+  margin: 0;
+  color: #888;
+  font-size: 14px;
+}
+
+.patient-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.patient-card-actions button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.btn-record {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-record:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.btn-view-plan {
+  background: #f5f5ff;
+  color: #667eea;
+  border: 1px solid #667eea;
+}
+
+.btn-view-plan:hover {
+  background: #667eea;
+  color: white;
+}
+
+.btn-message {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.btn-message:hover {
+  background: #e0e0e0;
+}
+
+/* Voice Recorder Modal */
+.voice-recorder-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.voice-recorder-card {
+  background: white;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.recorder-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 30px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.recorder-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #999;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.close-btn:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.recorder-body {
+  padding: 30px;
+}
+
+.patient-info-small {
+  background: #f5f7fa;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 14px;
+}
+
+.recorder-controls {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.recorder-visual {
+  margin-bottom: 30px;
+}
+
+.recording-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.pulse {
+  width: 80px;
+  height: 80px;
+  background: #f44336;
+  border-radius: 50%;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.recording-indicator p {
+  color: #f44336;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ready-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.ready-indicator span {
+  font-size: 60px;
+}
+
+.ready-indicator p {
+  color: #666;
+  font-size: 16px;
+}
+
+.btn-start-recording,
+.btn-stop-recording {
+  padding: 14px 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-start-recording {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-start-recording:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.btn-stop-recording {
+  background: #f44336;
+  color: white;
+}
+
+.btn-stop-recording:hover {
+  background: #d32f2f;
+}
+
+.recorder-preview {
+  padding: 20px 0;
+}
+
+.audio-preview {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.audio-preview span {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: #4caf50;
+  color: white;
+  border-radius: 50%;
+  font-size: 30px;
+  line-height: 60px;
+  margin-bottom: 15px;
+}
+
+.audio-preview p {
+  color: #4caf50;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.audio-preview audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.recorder-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.recorder-info {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.recorder-info p {
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.recorder-info ol {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.recorder-info li {
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Mode Selector */
+.mode-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  background: #f5f5f5;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.mode-btn {
+  flex: 1;
+  padding: 12px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #666;
+}
+
+.mode-btn.active {
+  background: white;
+  color: #667eea;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mode-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Upload Mode */
+.upload-mode {
+  padding: 20px 0;
+}
+
+.upload-area {
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  padding: 40px;
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.upload-area:hover {
+  border-color: #667eea;
+  background: #f5f5ff;
+}
+
+.upload-label {
+  cursor: pointer;
+  display: block;
+}
+
+.upload-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.upload-label p {
+  margin: 0;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.upload-label small {
+  display: block;
+  margin-top: 8px;
+  color: #888;
+  font-size: 13px;
+}
+
+.file-preview {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.file-info span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: #4caf50;
+  color: white;
+  border-radius: 50%;
+  font-size: 24px;
+}
+
+.file-info p {
+  margin: 0;
+  color: #333;
+}
+
+.file-info small {
+  color: #888;
+  font-size: 12px;
+}
+
+/* Patient Search */
+.patient-search {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.search-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.search-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.btn-add-patient {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-add-patient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.patient-search h2 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 5px;
+  color: #888;
+  font-size: 12px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  background: #4caf50;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #45a049;
+}
+
+.error-message {
+  background: #fee;
+  color: #c33;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.status-message {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.search-results {
+  margin-top: 30px;
+}
+
+.search-results h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.patient-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.patient-info h4 {
+  margin: 0 0 5px 0;
+  color: #333;
+}
+
+.patient-info p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.status-assigned {
+  color: #ff9800 !important;
+  font-weight: 600;
+  font-size: 13px !important;
+}
+
+.patient-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-view,
+.btn-assign {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-view {
+  background: #f5f5f5;
+  color: #666;
+}
+
+.btn-view:hover {
+  background: #e8e8e8;
+}
+
+.btn-assign {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-assign:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Add Patient Form */
+.add-patient-form {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.add-patient-form h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.form-description {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* Treatment Plan Form */
+.treatment-plan-form {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.treatment-plan-form h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.patient-info-header {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.patient-info-header h3 {
+  margin: 0 0 5px 0;
+  color: #667eea;
+}
+
+.patient-info-header p {
+  margin: 0;
+  color: #666;
+}
+
+.info-box {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+  border-left: 4px solid #667eea;
+}
+
+.info-box h4 {
+  margin-top: 0;
+  color: #333;
+}
+
+.info-box ol {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.info-box li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #888;
+}
+
+.empty-state h3 {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px;
+  color: #667eea;
+  font-size: 18px;
+}
+
+/* Therapist Feedback */
+.therapist-feedback {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feedback-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.feedback-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.feedback-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.feedback-filters button {
+  padding: 10px 20px;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #666;
+}
+
+.feedback-filters button.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+}
+
+.feedback-filters button:hover {
+  border-color: #667eea;
+}
+
+.feedback-list {
+  display: grid;
+  gap: 20px;
+}
+
+.feedback-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.feedback-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.feedback-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.feedback-card-header h4 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.feedback-date {
+  margin: 0;
+  color: #888;
+  font-size: 13px;
+}
+
+.feedback-icons {
+  display: flex;
+  gap: 10px;
+  font-size: 28px;
+}
+
+.feedback-card-body {
+  padding: 20px;
+}
+
+.feedback-task {
+  margin-bottom: 15px;
+  padding: 12px;
+  background: #f5f7fa;
+  border-radius: 6px;
+  color: #555;
+}
+
+.feedback-status-label,
+.feedback-mood {
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.status-badge,
+.mood-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-badge.easy {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.struggled {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.needs_practice {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.mood-badge.happy {
+  background: #d4edda;
+  color: #155724;
+}
+
+.mood-badge.neutral {
+  background: #f8f9fa;
+  color: #6c757d;
+}
+
+.mood-badge.frustrated {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.feedback-notes {
+  margin-top: 15px;
+  padding: 15px;
+  background: #fff8e1;
+  border-left: 4px solid #ffc107;
+  border-radius: 6px;
+}
+
+.feedback-notes p {
+  margin: 8px 0 0 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Treatment Plan View */
+.treatment-plan-view {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.plan-header h2 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 28px;
+}
+
+.plan-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #666;
+  font-size: 14px;
+}
+
+.separator {
+  color: #ccc;
+}
+
+.plan-summary,
+.plan-section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+}
+
+.plan-summary h3,
+.plan-section h3 {
+  margin: 0 0 20px 0;
+  color: #667eea;
+  font-size: 20px;
+}
+
+.plan-summary p {
+  margin: 0;
+  color: #555;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.goals-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.goals-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px;
+  margin-bottom: 12px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  color: #555;
+  line-height: 1.6;
+}
+
+.goal-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.tasks-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.task-card-view {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.task-card-view:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-color: #667eea;
+}
+
+.task-card-header-view {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-card-header-view h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.goal-badge {
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.task-card-body-view {
+  padding: 25px;
+}
+
+.task-detail {
+  margin-bottom: 20px;
+}
+
+.task-detail strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 15px;
+}
+
+.task-detail p {
+  margin: 0;
+  color: #555;
+  line-height: 1.7;
+}
+
+.task-detail.why-matters {
+  background: #fff8e1;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+}
+
+.video-suggestion-box {
+  background: #e3f2fd;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #2196f3;
+}
+
+.video-suggestion-box strong {
+  display: block;
+  margin-bottom: 10px;
+  color: #1976d2;
+}
+
+.ai-suggestion {
+  margin: 0 0 15px 0;
+  color: #555;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.btn-upload-video {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-upload-video:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.transcription-box {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.transcription-box p {
+  margin: 0;
+  color: #555;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+/* Therapy Type Badge */
+.therapy-type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+}
+
+.therapy-type-badge.speech {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.therapy-type-badge.behavior {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.therapy-type-badge.emotional {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.therapy-type-badge.motor {
+  background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+}
+
+/* Goal Category Badges */
+.goal-category-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  margin-left: 10px;
+}
+
+.goal-category-badge.speech {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.goal-category-badge.behavior {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.goal-category-badge.emotional {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.goal-category-badge.motor {
+  background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+}
+
+.goals-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Patient List Header Actions */
+.patient-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  padding: 10px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  min-width: 250px;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.btn-search-patient {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #667eea;
+  color: white;
+}
+
+.btn-search-patient:hover {
+  background: #5568d3;
+}
+
+/* Search and Add Form Panels */
+.search-form-panel,
+.add-form-panel {
+  background: #f8f9ff;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  border: 2px solid #667eea;
+}
+
+.search-form-panel h3,
+.add-form-panel h3 {
+  margin: 0 0 20px 0;
+  color: #667eea;
+}
+
+.search-results {
+  margin-top: 25px;
+}
+
+.search-results h4 {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.search-result-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.search-result-card h5 {
+  margin: 0 0 5px 0;
+  color: #333;
+}
+
+.search-result-card p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.status-assigned {
+  color: #ff9800;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+/* Progress Section in Treatment Plan */
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-toggle-progress {
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-toggle-progress:hover {
+  background: #5568d3;
+}
+
+.progress-section-therapist {
+  background: #f8f9ff;
+  padding: 25px;
+  border-radius: 12px;
+  margin: 20px 0;
+  border: 2px solid #667eea;
+}
+
+.progress-section-therapist h3 {
+  margin: 0 0 20px 0;
+  color: #667eea;
+  font-size: 20px;
+}
+
+.progress-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stat-card-small {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.stat-value-large {
+  font-size: 32px;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.skills-progress-therapist h4 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.skills-grid-therapist {
+  display: grid;
+  gap: 15px;
+}
+
+.skill-item-therapist {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.skill-name-therapist {
+  min-width: 180px;
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+.skill-bar-therapist {
+  flex: 1;
+  height: 12px;
+  background: #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.skill-fill-therapist {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.5s ease;
+}
+
+.skill-percentage-therapist {
+  min-width: 50px;
+  text-align: right;
+  font-weight: 600;
+  color: #667eea;
+  font-size: 14px;
+}
