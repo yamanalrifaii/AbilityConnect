@@ -53,6 +53,7 @@ AbilityConnect transforms how therapists and parents collaborate on child therap
 
 ### 1. Clone the Repository
 ```bash
+git clone https://github.com/yamanalrifaii/AbilityConnect.git
 cd AbilityConnect
 ```
 
