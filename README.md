@@ -242,11 +242,7 @@ The iOS Calendar integration works by generating `.ics` files that can be import
 
 ### Video Storage
 
-Videos are stored directly in Firebase Storage. For large-scale production:
-- Consider using a CDN
-- Implement video compression
-- Add video processing pipeline
-- Consider cost optimization strategies
+Videos are stored directly in Firebase Storage. 
 
 ## Database Schema
 
