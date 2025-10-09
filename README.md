@@ -53,7 +53,7 @@ AbilityConnect transforms how therapists and parents collaborate on child therap
 
 ### 1. Clone the Repository
 ```bash
-cd mediminds
+cd AbilityConnect
 ```
 
 ### 2. Install Dependencies
